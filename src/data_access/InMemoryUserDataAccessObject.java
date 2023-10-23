@@ -3,6 +3,7 @@ package data_access;
 import entity.User;
 import use_case.signup.SignupUserDataAccessInterface;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,4 +27,10 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
     public void save(User user) {
         users.put(user.getName(), user);
     }
+
+    public void clr_users(){
+        users.clear();
+    }
 }
+
+
